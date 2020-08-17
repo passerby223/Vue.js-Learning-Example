@@ -8,7 +8,7 @@
 <body>
     <!-- 这是View  现在就是templet模板-->
     <!-- 这里是根组件的templet模板 -->
-    <div id="app"> 
+    <div id="app">
         <bbar thename='主页' :show='false'></bbar>
         <bbar thename='简介' :show='true'></bbar>
         <bbar thename='产品' :show='true'></bbar>
@@ -17,13 +17,14 @@
         <br>
         <bbar :thename='p_name'></bbar>
         <br>
-        
+
     </div>
 
 
     <script>
+        // 全局定义（注册）组件
         Vue.component
-        (   
+        (
             'bbar',
             {
                 template: `
@@ -46,7 +47,7 @@
                 },
             }
         )
-        
+
         var vm = new Vue // 这里new实例后，就自动创建root组件（根组件）
         (
             {
