@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <!-- view层 -->
     <div id="app">
         <todo>
-            <todo-title slot="todo-title" :title_e="title"></todo-title>
-            <todo-items slot="todo-items" v-for="item in todoItems" :item_m="item"></todo-items>
+            <todo-title_c slot="todo-title" :title_e="title"></todo-title_c>
+            <todo-items_c slot="todo-items" v-for="item in todoItems" :item_m="item"></todo-items_c>
             <!-- 这里的slot是固定的，title_e是自定义，item_m是自定义 -->
         </todo>
     </div>
@@ -29,13 +29,13 @@
             }
         );
         Vue.component(
-            'todo-title',{
+            'todo-title_c',{
                 props: ['title_e'],
                 template: '<div>{{ title_e }}</div>'
             }
         );
         Vue.component(
-            'todo-items',{
+            'todo-items_c',{
                 props: ['item_m'],
                 template: '<li>{{ item_m }}</li>'
             }

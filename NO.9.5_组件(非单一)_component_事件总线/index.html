@@ -15,7 +15,7 @@
 
 
     <script>
-
+        // 全局注册组件
         Vue.component
         (   
             'bbar',
@@ -24,7 +24,7 @@
                         <div>
                             【bbar组件 希望发送给cbar】
                             <input type="text" ref='b_text' />
-                            <button @click='send()'>点这发送cbar</button>
+                            <button @click='send()'>点这发送消息给cbar</button>
                         </div>`,
                 methods: {
                     send(){
